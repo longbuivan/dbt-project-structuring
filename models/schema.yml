@@ -29,6 +29,8 @@ models:
         tests:
           - unique
           - not_null
+          # - is_even
+          - warn_if_odd
       - name: status
         tests:
           - accepted_values:
