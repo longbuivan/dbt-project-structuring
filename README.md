@@ -1,18 +1,35 @@
-# Structuring Dbt Project
+## Description
 
-An introduction how we structure dbt project as multi-hop lineage
+Demo Project For Data Engineering Camping
 
-### Using the starter project
+## Setting up
 
-Try running the following commands:
+> dbt init
 
-- dbt run
-- dbt test
+> dbt deps
 
-### Resources
 
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+```sql
+CREATE TABLE bookings_1 (
+    id INTEGER,
+    booking_reference INTEGER,
+    hotel STRING,
+    booking_date DATE,
+    cost INTEGER
+);
+CREATE TABLE bookings_2 (
+    id INTEGER,
+    booking_reference INTEGER,
+    hotel STRING,
+    booking_date DATE,
+    cost INTEGER
+);
+CREATE TABLE customers (
+    id INTEGER,
+    first_name STRING,
+    last_name STRING,
+    birthdate DATE,
+    membership_no INTEGER
+);
+
+```
