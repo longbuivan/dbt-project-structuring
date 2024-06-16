@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: customer
+    description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+
+    columns:
+      - name: id
+        description: This is a unique identifier for a customer
+        tests:
+          - unique
+          - not_null
+
+  - name: combined_booking
+    description: This table combines information of bookings
+
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+        description: This is a unique identifier for an order

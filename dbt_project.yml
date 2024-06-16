@@ -33,6 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   booking_dbt:
+    +tags: "dev"
     # Config indicated by + and applies to all files under models/example/
     transform:
         schema: transform
