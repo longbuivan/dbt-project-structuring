@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: hotel_count_by_day
+    description: This table represents hotel count by day
+
+    columns:
+      - name: hotel
+        tests:
+          - not_null
+      - name: booking_date
+        tests:
+          # - unique
+          - not_null
+        description: This is a unique identifier for hotel count by day
+
+  - name: thirty_day_avg_cost
+    description: This table represents thirty day average cost
+
+    columns:
+      - name: hotel
+        tests:
+          - not_null
+      - name: booking_date
+        tests:
+          # - unique
+          - not_null
+        description: This is a unique identifier for thirty day average cost

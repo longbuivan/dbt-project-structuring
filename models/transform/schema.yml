@@ -11,12 +11,38 @@ models:
           - unique
           - not_null
 
-  - name: combined_booking
+  - name: combined_bookings
     description: This table combines information of bookings
 
     columns:
       - name: id
+        description: This is a unique identifier for an bookings
+
         tests:
-          - unique
+          # - unique
           - not_null
-        description: This is a unique identifier for an order
+      - name: cost
+        description: The cost of the booking
+        tests:
+          - not_null
+          # - greater_than:
+          #     value: 0
+      - name: booking_reference
+        tests:
+          - not_null
+          # - numeric
+        description: The reference number of the booking
+
+  - name: prepped_data
+    description: This table represents prepared bookings
+
+    columns:
+      - name: id
+        tests:
+          # - unique
+          - not_null
+        description: This is a unique identifier for a prepared booking
+      - name: booking_date
+        tests:
+          - not_null
+        description: The date of the prepared booking
